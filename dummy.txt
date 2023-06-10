@@ -1,0 +1,16 @@
+
+  "_id": {
+    "$oid": "64799ada6c75a80634b3a657"
+  },
+  "name": "Hell0123",
+  "email": "jbsanjay579@gmail.com",
+  "password": "$2a$10$gp8iSdE6O59b33PMOP1lc.T.8U8WCIqx8vezHk23ltGHatGSCOYxS",
+  "subscribers": 0,
+  "subscribedusers": [],
+  "createdAt": {
+    "$date": "2023-06-02T07:31:38.626Z"
+  },
+  "updatedAt": {
+    "$date": "2023-06-02T07:31:38.626Z"
+  },
+  "__v": 0

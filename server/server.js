@@ -6,6 +6,8 @@ import user from './routes/users.js';
 import video from './routes/videos.js';
 import comment from './routes/comments.js';
 import cookieParser from "cookie-parser";
+import cors from 'cors';
+
 const app=express();
 dotenv.config();
 
@@ -19,12 +21,13 @@ const connect=() =>{
 } 
 connect()
 // app.use(cookieParser)
+app.use(cors())
+app.use(cookieParser())
 app.use(express.json())
 app.use("/api/users",user);
 app.use("/api/videos",video);
 app.use("/api/comments",comment);
 app.use("/api/auth",auth);
-
 app.use((err,req,res,next)=>{
    const status=err.status||500;
    const message=err.message||"Something went wrong";

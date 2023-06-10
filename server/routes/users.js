@@ -7,17 +7,17 @@ const router=express.Router();
 //To Update User
 router.put('/:id',verifyToken,update);
 //To Delete a User Account
-router.delete('/:id', deleteUser);
+router.delete('/:id',verifyToken, deleteUser);
 //To Get a user
 router.get('/find/:id',getUser);
 //to subscribe a channel
-router.put('/sub/:id', subscribe);
+router.put('/sub/:id',verifyToken,subscribe);
 //to unsubscribe a channel
-router.put('/unsub/:id',unsubscribe);
+router.put('/unsub/:id',verifyToken,unsubscribe);
 //To like a Video
-router.put('/like/:videoid',like);
+router.put('/like/:videoid',verifyToken,like);
 //To unlike a video
-router.put('/dislike/:videoid',dislike);
+router.put('/dislike/:videoid',verifyToken,dislike);
 
 
 export default router;
